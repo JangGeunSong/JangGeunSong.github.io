@@ -1,0 +1,28 @@
+.header {
+    position: relative;
+    h1 {
+        margin: 0;
+        padding: 0;
+        padding-left: 7px;
+        display: inline;
+    }
+    nav {
+        display: inline;
+        ul {
+            padding: 0 0 2px;
+            margin: 0;
+            text-align: right;
+            float: right;
+            font-size: 1.75rem;
+            li {
+                display: inline;
+                list-style: none;
+            }
+        }
+    }
+    a:hover {
+        color: $danger-color;
+        border-bottom: solid $secondary-color;
+        transition: 0.2s ease-in-out;
+    }
+}

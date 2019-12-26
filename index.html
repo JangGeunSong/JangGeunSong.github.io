@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>TItle of portfolio</title>
 </head>
-<body>
-    <header class="header">
+<body id="body">
+    <!-- 포트폴리오 헤더 -->
+    <header id="header" class="header">
         <!-- 타이틀, 버튼들 주어서 그 섹션으로 이동하도록 처리 -->
-        <h1><a href="#Top">TItle</a></h1>
+        <h1><a href="#Top">HOME</a></h1>
         <nav>
             <ul>
                 <li>
@@ -42,13 +43,14 @@
             </ul>
         </nav>
     </header>
-    <!-- 포트폴리오 최 상단 -->
-    <section id="Top" class="top">
-        <div class="container">
-            신입개발자 송장근 입니다.
+    <!-- 포트폴리오 상단 -->
+    <section id="Top">
+        <div class="container top">
+            <p>프론트엔드를 중심으로 웹 개발을 하는 신입개발자 송장근 입니다.</p>
         </div>
     </section>
-    <section id="About" class="about">
+    <!-- 포트폴리오 자기소개 -->
+    <section id="About">
         <div class="container">
             <h3>Name: 송장근</h3>
             <p>
@@ -62,56 +64,71 @@
             </p>
         </div>
     </section>
-    <section id="Skills" class="skills">
+    <!-- 포트폴리오 가진 기술 나열 -->
+    <section id="Skills">
         <div class="container">
-            (Front-End)
-            Javascript(ES6) -> multi web app등의 프로젝트를 통해 적용됨<br>
-            HTML -> multi web app등의 프로젝트를 통해 적용됨<br>
-            CSS -> multi web app등의 프로젝트를 통해 적용됨<br>
-            React.js -> multi web app등의 프로젝트를 통해 적용됨<br>
-            GraphQL (Apollo) -> multi web app등의 프로젝트를 통해 적용됨<br>
-            (Back-End)
-            Node.js -> multi web app등의 프로젝트를 통해 적용됨<br>
-            Express.js -> multi web app등의 프로젝트를 통해 적용됨<br>
-            GraphQL (Apollo) -> multi web app등의 프로젝트를 통해 적용됨<br>
-            (DB)
-            MongoDB -> multi web app등의 프로젝트를 통해 적용됨<br>
-            Mongoose -> multi web app등의 프로젝트를 통해 적용됨<br>
-            (DEVops)
-            AWS (EC2, Route 53, S3) -> multi web app등의 프로젝트를 통해 적용됨<br>
+            <div class="box">
+                <!-- Front-end 기술사항 소개 -->
+                <h2>Front-End</h2>
+                <h3>Javascript(ES6)</h3>
+                <p>기초적인 자바스크립트를 활용하여 웹 페이지를 동적으로 활동하도록 할 수 있습니다.</p>
+                <h3>Typescript</h3>
+                <p>자바스크립트의 기능을 준수하면서 대형 프로젝트에 친화적인 타입스크립트를 활용할 수 있습니다.</p>
+                <h3>HTML</h3>
+                <p>웹 표준을 준수하는 HTML을 이해하고 있습니다.</p>
+                <h3>React.js</h3>
+                <p>코드를 재사용하고 모듈화 하여 분리해 관리 가능한 React.js를 사용할 수 있습니다.</p>
+                <h3>CSS</h3>
+                <p>웹의 가장 기본적인 디자인을 책임지는 CSS를 표준에 맞춰 제작할 수 있습니다.</p>
+                <h3>Sass</h3>
+                <p>CSS에 프로그래밍적 기능을 추가한 preprocessor인 sass를 사용할 수 있습니다.</p>
+                <h3>GraphQL (Apollo)</h3>
+                <p>프론트엔드의 데이터를 받아오는 여러 일들을 GraphQL로 통신할 수 있습니다.</p>
+            </div>
+            <div class="box">
+                <!-- Back-end part 기술사항 소개 -->
+                <h2>Back-End</h2>
+                <h3>Node.js</h3>
+                <p>모든 웹의 서버 기반인 Node.js를 사용하여 코딩할 수 있습니다.</p>
+                <h3>Express.js</h3>
+                <p>Node.js의 웹 서버를 더 효율적으로 만들 수 있는 Express.js를 사용할 수 있습니다.</p>
+                <h3>GraphQL (Apollo)</h3>
+                <p>데이터를 클라이언트에게 전달할때 내부에서 처리하는 여러 로직을 GraphQL을 통해 제작할 수 있습니다.</p>
+                <h3>MongoDB</h3>
+                <p>NoSQL문을 사용하는 MongoDB를 통해 사용자 정보를 저장하고 관리할 수 있습니다.</p>
+                <h3>Mongoose</h3>
+                <p>Node.js에서 DB에 접근하여 데이터를 관리하는 Mongoose를 사용할 수 있습니다.</p>
+            </div>
+            <div class="box">
+                <!-- dev-ops part 기술사항 소개 -->
+                <h2>dev-ops</h2>
+                <h3>AWS (EC2, Route 53, S3)</h3>
+                <p>제작한 서버를 실제 사용자에게 호스팅 하기 위해 AWS를 사용하여 서버컴퓨터를 생성하고 도메인을 연결하여 서비스 할 수 있습니다.</p>
+            </div>
         </div>
     </section>
-    <section id="Project" class="project">
+    <!-- 포트폴리오 가지고 있는 프로젝트 -->
+    <section id="Project">
         <div class="container">
             Multi Web App Node    -> Server / Client / DB / DEVops파트로 각각 쪼개서 처리
+            Client: React.js를 사용하여 UI를 제작한 후 이를 GraphQL로 데이터 이동하도록 처리하였습니다.
+
+            Server: 클라이언트 부분에서 요청하는 사항을 Apollo를 통해 처리하고 이를 전달하도속 제작하였습니다. 
+
+            DB: 서버에서 요청하는 것을 데이터 처리하도록 MongoDB를 사용하여 처리하였습니다.
+
+            DEVops: 실제 웹 호스팅을 위해 AWS의 EC2를 활용하였습니다. 또 정적 파일을 보내기 위해 S3를 사용하였습니다.
         </div>
     </section>
-    <section id="Contact" class="contact">
+    <!-- 포트폴리오 연락처 -->
+    <section id="Contact">
         <div class="container">
-            Hello  // Email Address add
+            <p>email: eta1@naver.com</p>
         </div>
     </section>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

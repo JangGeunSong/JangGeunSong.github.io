@@ -1,9 +1,42 @@
 .container {
     width: 100%;
+
+    img {
+        height: auto;
+        border: solid 1px $warning-color;
+    }
+    .desktopimg {
+        width: 70%;
+    }
+    .phoneimg {
+        width: auto;
+    }
 }
 
 .top {
     padding-top: 5rem;
+    text-align: center;
+    p {
+        width: fit-content;
+        overflow: hidden;
+        border-right: 0.15em solid $secondary-color;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        animation:
+            typing 7s steps(60, end) ,
+            blink-caret 0.75s step-end infinite
+    }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 36%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: $secondary-color; }
 }
 
 .box {

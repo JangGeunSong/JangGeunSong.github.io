@@ -1,8 +1,9 @@
-// let topTween = gsap.from("#Top", {duration: 2, y: -50});
+// 처음 접속시 애니메이션 효과
 let aboutTween = gsap.from("#About", {duration: 2, y: -50});
 let skillsTween = gsap.from("#Skills", {duration: 2, y: -50});
 let projectTween = gsap.from("#Project", {duration: 2, y: -50});
 
+// 섹션 이동시 애니메이션 스크롤 효과
 let speed = 700;	// 스크롤 스피드 수치로 사용할 변수 
 
 //로직

@@ -1,15 +1,25 @@
 .container {
     width: 100%;
+    
+    p {
+        margin: 0;
+    }
 
     img {
         height: auto;
         border: solid 1px $warning-color;
     }
-    .desktopimg {
-        width: 70%;
+    .skillImg {
+        width: 7rem;
+        height: auto;
     }
-    .phoneimg {
-        width: auto;
+    .desktopImg {
+        width: 50rem;
+        height: auto;
+    }
+    .mobileImg {
+        width: 25rem;
+        height: auto;
     }
 }
 
@@ -42,4 +52,22 @@
 .box {
     width: 100%;
     height: 50%;
+}
+
+
+.contact {
+    background: $section-color;
+    margin: 0;
+    padding-top: 17.5rem;
+    padding-bottom: 17.5rem;
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        text-align: center;
+    }
+    .contact-text {
+        font-size: 2rem;
+        color: $white-color;
+    }
 }

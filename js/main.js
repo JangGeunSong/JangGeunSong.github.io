@@ -28,3 +28,36 @@ $("h1 a").click(function() {
     scrolling( direction );
     return false
 })
+
+let boxNum = 1;
+
+slideSkills = (index) => {
+    let i;
+    let boxies = document.getElementsByClassName('box');
+    let dots = document.getElementsByClassName('dot');
+    if (index > boxies.length) {
+        boxNum = 1
+    }
+    if (index < 1) {
+        boxNum = boxies.length
+    }
+    for (i = 0; i < boxies.length; i++) {
+        boxies[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    boxies[boxNum-1].style.display = "block";
+    dots[boxNum-1].className += " active";
+}
+
+nextSkill = (index) => {
+    slideSkills(boxNum = boxNum + index)
+}
+
+goCurrentSkill = (index) => {
+    slideSkills(boxNum = index)
+}
+slideSkills(boxNum)
+
+

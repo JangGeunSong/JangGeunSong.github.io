@@ -67,53 +67,88 @@
     <!-- 포트폴리오 가진 기술 나열 -->
     <section id="Skills">
         <div class="container">
-            <div class="box">
+            <div class="dots">
+                <span class="dot" onclick="goCurrentSkill(1)"></span>
+                <span class="dot" onclick="goCurrentSkill(2)"></span>
+                <span class="dot" onclick="goCurrentSkill(3)"></span>
+            </div>
+            <div class="box fade">
                 <!-- Front-end 기술사항 소개 -->
-                <h2>Front-End</h2>
-                <img class="skillImg" src="./img/html.png" alt="html">
-                <h3>HTML</h3>
-                <p>웹 표준을 준수하는 HTML을 이해하고 있습니다.</p>
-                <img class="skillImg" src="./img/css.png" alt="css">
-                <h3>CSS</h3>
-                <p>웹의 가장 기본적인 디자인을 책임지는 CSS를 표준에 맞춰 제작할 수 있습니다.</p>
-                <img class="skillImg" src="./img/js.png" alt="JS">
-                <h3>Javascript(ES6)</h3>
-                <p>기초적인 자바스크립트를 활용하여 웹 페이지를 동적으로 활동하도록 할 수 있습니다.</p>
-                <img class="skillImg" src="./img/TS.jpeg" alt="TS">
-                <h3>Typescript</h3>
-                <p>자바스크립트의 기능을 준수하면서 대형 프로젝트에 친화적인 타입스크립트를 활용할 수 있습니다.</p>
-                <img class="skillImg" src="./img/react.png" alt="react">
-                <h3>React.js</h3>
-                <p>코드를 재사용하고 모듈화 하여 분리해 관리 가능한 React.js를 사용할 수 있습니다.</p>
-                <img class="skillImg" src="./img/sass.png" alt="sass">
-                <h3>Sass</h3>
-                <p>CSS에 프로그래밍적 기능을 추가한 preprocessor인 sass를 사용할 수 있습니다.</p>
-                <img class="skillImg" src="./img/graphql.png" alt="graphql">
-                <h3>GraphQL (Apollo)</h3>
-                <p>프론트엔드의 데이터를 받아오는 여러 일들을 GraphQL로 통신할 수 있습니다.</p>
+                <h2 id="frontend">Front-End</h2>
+                <div id="front-panel">
+                    <div class="item">
+                        <img class="skillImg" src="./img/html.png" alt="html">
+                        <h3>HTML</h3>
+                        <p>웹 표준을 준수하는 HTML을 이해하고 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/css.png" alt="css">
+                        <h3>CSS</h3>
+                        <p>웹의 가장 기본적인 디자인을 책임지는 CSS를 표준에 맞춰 제작할 수 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/js.png" alt="JS">
+                        <h3>Javascript(ES6)</h3>
+                        <p>기초적인 자바스크립트를 활용하여 웹 페이지를 동적으로 활동하도록 할 수 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/TS.jpeg" alt="TS">
+                        <h3>Typescript</h3>
+                        <p>자바스크립트의 기능을 준수하면서 대형 프로젝트에 친화적인 타입스크립트를 활용할 수 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/react.png" alt="react">
+                        <h3>React.js</h3>
+                        <p>코드를 재사용하고 모듈화 하여 분리해 관리 가능한 React.js를 사용할 수 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/sass.png" alt="sass">
+                        <h3>Sass</h3>
+                        <p>CSS에 프로그래밍적 기능을 추가한 preprocessor인 sass를 사용할 수 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/graphql.png" alt="graphql">
+                        <h3>GraphQL (Apollo)</h3>
+                        <p>프론트엔드의 데이터를 받아오는 여러 일들을 GraphQL로 통신할 수 있습니다.</p>
+                    </div>
+                </div>
             </div>
-            <div class="box">
+            <div class="box fade">
                 <!-- Back-end part 기술사항 소개 -->
-                <h2>Back-End</h2>
-                <img class="skillImg" src="./img/node.jpg" alt="nodejs">
-                <h3>Node.js</h3>
-                <p>모든 웹의 서버 기반인 Node.js를 사용하여 코딩할 수 있습니다.</p>
-                <img class="skillImg" src="./img/express.png" alt="express">
-                <h3>Express.js</h3>
-                <p>Node.js의 웹 서버를 더 효율적으로 만들 수 있는 Express.js를 사용할 수 있습니다.</p>
-                <img class="skillImg" src="./img/graphql.png" alt="graphql">
-                <h3>GraphQL (Apollo)</h3>
-                <p>데이터를 클라이언트에게 전달할때 내부에서 처리하는 여러 로직을 GraphQL을 통해 제작할 수 있습니다.</p>
-                <img class="skillImg" src="./img/mongodb.png" alt="mongodb">
-                <h3>MongoDB</h3>
-                <p>NoSQL문을 사용하는 MongoDB를 통해 사용자 정보를 저장하고 관리할 수 있습니다.</p>
+                <h2 id="backend">Back-End</h2>
+                <div id="backend-panel">
+                    <div class="item">
+                        <img class="skillImg" src="./img/node.jpg" alt="nodejs">
+                        <h3>Node.js</h3>
+                        <p>모든 웹의 서버 기반인 Node.js를 사용하여 코딩할 수 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/express.png" alt="express">
+                        <h3>Express.js</h3>
+                        <p>Node.js의 웹 서버를 더 효율적으로 만들 수 있는 Express.js를 사용할 수 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/graphql.png" alt="graphql">
+                        <h3>GraphQL (Apollo)</h3>
+                        <p>데이터를 클라이언트에게 전달할때 내부에서 처리하는 여러 로직을 GraphQL을 통해 제작할 수 있습니다.</p>
+                    </div>
+                    <div class="item">
+                        <img class="skillImg" src="./img/mongodb.png" alt="mongodb">
+                        <h3>MongoDB</h3>
+                        <p>NoSQL문을 사용하는 MongoDB를 통해 사용자 정보를 저장하고 관리할 수 있습니다.</p>
+                    </div>
+                </div>
             </div>
-            <div class="box">
+            <div class="box fade">
                 <!-- dev-ops part 기술사항 소개 -->
-                <h2>dev-ops</h2>
-                <img class="skillImg" src="./img/aws.png" alt="aws">
-                <h3>AWS (EC2, Route 53, S3)</h3>
-                <p>제작한 서버를 실제 사용자에게 호스팅 하기 위해 AWS를 사용하여 서버컴퓨터를 생성하고 도메인을 연결하여 서비스 할 수 있습니다.</p>
+                <h2 id="devops">dev-ops</h2>
+                <div id="devops-panel">
+                    <div class="item">
+                        <img class="skillImg" src="./img/aws.png" alt="aws">
+                        <h3>AWS (EC2, Route 53, S3)</h3>
+                        <p>제작한 서버를 실제 사용자에게 호스팅 하기 위해 AWS를 사용하여 서버컴퓨터를 생성하고 도메인을 연결하여 서비스 할 수 있습니다.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

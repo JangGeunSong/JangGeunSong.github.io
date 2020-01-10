@@ -8,7 +8,7 @@
 
     img {
         height: auto;
-        border: solid 1px $warning-color;
+        border: solid 1px $border-color;
     }
     .skillImg {
         width: 7rem;
@@ -21,6 +21,10 @@
     .mobileImg {
         width: 25rem;
         height: auto;
+    }
+    a:hover {
+        color: $hover-color;
+        transition: 0.2s ease-in-out;
     }
 
 }
@@ -50,7 +54,7 @@
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: $secondary-color; }
+    50% { border-color: $border-color; }
 }
 
 // 가진 기술들 나열을 위해 슬라이드 쇼를 진행할때 필요
@@ -67,13 +71,23 @@
 
 }
 
-#front-panel, #backend-panel, #devops-panel {
+#front-panel, #backend-panel {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     .item {
         margin: 0;
         text-align: center;
-        border: dotted $warning-color;
+        border: dotted $border-color;
+    }
+}
+
+#devops-panel {
+    grid-template-columns: auto auto auto auto auto auto;
+    .item {
+        align-items: center;
+        margin: 0;
+        text-align: center;
+        border: dotted $border-color;
     }
 }
 
@@ -86,20 +100,24 @@
     from {opacity: .4} 
     to {opacity: 1}
 }
-
+// 버튼 디자인
 .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: $primary-color;
+    background-color: $dot-color;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
+.dot:hover {
+    background-color: $hover-color;
+}
+
 .active {
-    background-color: $sheet-color;
+    background-color: $dot-act-color;
 }
   
 // 연락처 부분 디자인
@@ -116,7 +134,7 @@
     }
     .contact-text {
         font-size: 2rem;
-        color: $white-color;
+        color: $font-color;
     }
 }
 

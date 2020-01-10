@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     background: $sheet-color;
-    color: $white-color;
+    color: $font-color;
     width: 100%;
     z-index: 1000;
     h1 {
@@ -28,8 +28,8 @@
             }
         }
         a:hover {
-            color: $danger-color;
-            border-bottom: solid $secondary-color;
+            color: $hover-color;
+            border-bottom: solid $border-color;
             transition: 0.2s ease-in-out;
         }
     }

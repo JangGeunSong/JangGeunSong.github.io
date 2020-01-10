@@ -4,7 +4,7 @@ let skillsTween = gsap.from("#Skills", {duration: 2, y: -50});
 let projectTween = gsap.from("#Project", {duration: 2, y: -50});
 
 // 섹션 이동시 애니메이션 스크롤 효과
-let speed = 700;	// 스크롤 스피드 수치로 사용할 변수 
+let speed = 800;	// 스크롤 스피드 수치로 사용할 변수 
 
 //로직
 function scrolling(obj){

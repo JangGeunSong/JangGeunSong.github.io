@@ -7,11 +7,11 @@ body {
     width: 100%;
     height: 97vh;
     font-family: 'Nanum Myeongjo', serif;
-    background: $black-color;
-    color: $white-color;
+    background: $body-color;
+    color: $font-color;
 }
 
 a {
     text-decoration: none;
-    color: $warning-color;
+    color: $link-color;
 }

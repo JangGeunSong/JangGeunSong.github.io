@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <title>TItle of portfolio</title>
+    <title>송장근 포트폴리오</title>
 </head>
 <body id="body">
     <!-- 포트폴리오 헤더 -->
@@ -51,7 +51,7 @@
     </section>
     <!-- 포트폴리오 자기소개 -->
     <section id="About">
-        <div class="container">
+        <div class="container project">
             <h3>Name: 송장근</h3>
             <p class="about_intro">
                 Education: 세종대학교 천문우주학과 (주전공), 컴퓨터공학과 (복수전공)
@@ -163,11 +163,19 @@
     <section id="Project">
         <h3>Multi Web App Node</h3>
         <div class="container">
-            <img class="desktopImg" src="./img/메인1.JPG" alt="메인화면 1">
-            <img class="desktopImg" src="./img/메인3.JPG" alt="메인화면 2"><br>
-            <img class="mobileImg" src="./img/폰화면1.JPG" alt="폰화면 1">
-            <img class="mobileImg" src="./img/폰화면2.JPG" alt="폰화면 1">
-            <p>
+            <div class="imgbox">
+                <div class="dots">
+                    <span class="imgDot" onclick="goCurrentImg(1)"></span>
+                    <span class="imgDot" onclick="goCurrentImg(2)"></span>
+                    <span class="imgDot" onclick="goCurrentImg(3)"></span>
+                    <span class="imgDot" onclick="goCurrentImg(4)"></span>
+                </div>
+                <img class="img desktopImg" src="./img/메인1.JPG" alt="메인화면 1">
+                <img class="img desktopImg" src="./img/메인3.JPG" alt="메인화면 2"><br>
+                <img class="img mobileImg" src="./img/폰화면1.JPG" alt="폰화면 1">
+                <img class="img mobileImg" src="./img/폰화면2.JPG" alt="폰화면 1">
+            </div>
+            <p class="project-contents">
                 Client: React.js를 사용하여 UI를 제작한 후 이를 GraphQL로 데이터 이동하도록 처리하였습니다. <br>
     
                 Server: 클라이언트 부분에서 요청하는 사항을 Apollo를 통해 처리하고 이를 전달하도속 제작하였습니다. <br> 
@@ -175,9 +183,9 @@
                 DB: 서버에서 요청하는 것을 데이터 처리하도록 MongoDB를 사용하여 처리하였습니다. <br>
     
                 DEVops: 실제 웹 호스팅을 위해 AWS의 EC2를 활용하였습니다. 또 정적 파일을 보내기 위해 S3를 사용하였습니다. <br>
+                <a href="https://songjanggeun.net">프로젝트 접속하기</a><br>
+                <a href="https://github.com/JangGeunSong/multi-web-app-node">프로젝트 세부내용 링크</a>
             </p>
-            <a href="https://songjanggeun.net">프로젝트 접속하기</a><br>
-            <a href="https://github.com/JangGeunSong/multi-web-app-node">프로젝트 세부내용 링크</a>
         </div>
     </section>
     <!-- 포트폴리오 연락처 -->

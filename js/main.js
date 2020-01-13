@@ -29,6 +29,7 @@ $("h1 a").click(function() {
     return false
 })
 
+// 기술사항 슬라이드 구현
 let boxNum = 1;
 
 slideSkills = (index) => {
@@ -59,5 +60,37 @@ goCurrentSkill = (index) => {
     slideSkills(boxNum = index)
 }
 slideSkills(boxNum)
+
+// 프로젝트 이미지 슬라이드 구현
+let imgBoxNum = 1;
+
+slideImgs = (index) => {
+    let i;
+    let imgBoxies = document.getElementsByClassName('img');
+    let imgDots = document.getElementsByClassName('imgDot');
+    if (index > imgBoxies.length) {
+        imgBoxNum = 1
+    }
+    if (index < 1) {
+        imgBoxNum = imgBoxies.length
+    }
+    for (i = 0; i < imgBoxies.length; i++) {
+        imgBoxies[i].style.display = "none";
+    }
+    for (i = 0; i < imgDots.length; i++) {
+        imgDots[i].className = imgDots[i].className.replace(" active", "");
+    }
+    imgBoxies[imgBoxNum-1].style.display = "block";
+    imgDots[imgBoxNum-1].className += " active";
+}
+
+nextImg = (index) => {
+    slideImgs(imgBoxNum = imgBoxNum + index)
+}
+
+goCurrentImg = (index) => {
+    slideImgs(imgBoxNum = index)
+}
+slideImgs(imgBoxNum)
 
 

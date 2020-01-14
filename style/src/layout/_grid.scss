@@ -4,9 +4,9 @@ $breakpoints: (
     'medium': 400px,
 );
 
-@mixin sizeForBrowser($size, $size: $breakpoints) {
-    @if map-has-key($size, $size) {
-        $size: map-get($size, $size)
+@mixin sizeForBrowser($size, $sizes: $breakpoints) {
+    @if map-has-key($sizes, $size) {
+        $size: map-get($sizes, $size)
     }
 
     @media screen and (max-width: #{$size}){
